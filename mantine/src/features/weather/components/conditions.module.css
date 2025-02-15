@@ -1,0 +1,18 @@
+.conditionsCard {
+  width: auto;
+}
+
+.conditionsGrid {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+}
+
+.conditionsGrid > div {
+  font-size: 0.875rem;
+}
+
+@media only screen and (min-width: 640px) {
+  .conditionsCard {
+    width: 20rem;
+  }
+}

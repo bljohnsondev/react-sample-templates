@@ -1,0 +1,28 @@
+.maingrid {
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.header {
+  grid-column: 1 / span 2;
+  border-bottom: 1px solid var(--app-border-color);
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+.content {
+  background-color: var(--app-background);
+}
+
+@media only screen and (min-width: 768px) {
+  .maingrid {
+    grid-template-columns: 14rem auto;
+  }
+
+  .content {
+    border-left: 1px solid var(--app-border-color);
+  }
+}

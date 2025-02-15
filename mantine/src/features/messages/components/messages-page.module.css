@@ -1,0 +1,16 @@
+.messagesInput {
+  margin-bottom: 1rem;
+}
+
+.messagelist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 640px) {
+  .messagesInput {
+    width: 20rem;
+  }
+}
