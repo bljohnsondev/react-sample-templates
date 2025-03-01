@@ -2,11 +2,12 @@ import { useState } from 'react';
 
 import { AppContent } from './app-content';
 import { AppHeader } from './app-header';
-import styles from './app-layout.module.css';
 import { MainMenu } from './main-menu';
 
 import { menuItems } from '@/app/menu-items';
 import { globalConfig } from '@/config/config-vars';
+
+import styles from './app-layout.module.css';
 
 interface AppLayoutProps {
   children: React.ReactNode;

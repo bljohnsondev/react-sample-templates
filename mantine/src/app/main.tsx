@@ -9,7 +9,8 @@ import '@fontsource-variable/inter/index.css';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 
-import './index.css';
+import '@/styles/main.css';
+import '@/styles/theme.css';
 
 const theme = createTheme({
   fontFamily: 'Inter Variable, sans-serif',

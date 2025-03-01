@@ -4,6 +4,7 @@
   left: 0;
   right: 0;
   display: flex;
+  gap: var(--mantine-spacing-xs);
   flex-direction: column;
   padding-top: 1rem;
   background-color: var(--app-menu-bg-color);
@@ -31,13 +32,15 @@
   padding: 1rem;
   text-decoration: none;
   color: var(--app-menu-color);
-  border-radius: var(--mantine-radius-md);
   font-size: var(--mantine-font-size-sm);
+  border-radius: var(--mantine-radius-md);
+  border: 1px solid var(--app-menu-border-color);
 }
 
 .mainmenu > a.active {
   color: var(--app-menu-selected-color);
   background-color: var(--app-menu-selected-bg-color);
+  border: 1px solid var(--app-menu-selected-border-color);
 }
 
 @media only screen and (min-width: 768px) {
