@@ -1,0 +1,51 @@
+@theme {
+  --color-header-bg: var(--color-gray-200);
+  --color-header-title: var(--color-orange-600);
+  --color-header-icon: oklch(66.89% 0.1575 248.32);
+
+  --color-menu-border: var(--color-gray-300);
+  --color-menu-hover-bg: var(--color-gray-200);
+  --color-menu-selected-text: var(--color-blue-700);
+  --color-menu-selected-bg: var(--color-blue-100);
+  --color-menu-selected-border: var(--color-blue-200);
+
+  --color-page-title: var(--color-green-600);
+
+  --color-tab-outer-border: var(--color-gray-300);
+  --color-tab-text: var(--color-neutral-600);
+  --color-tab-bg: var(--color-gray-200);
+  --color-tab-active-text: var(--color-neutral-100);
+  --color-tab-active-bg: var(--color-neutral-700);
+  --color-tab-active-border: transparent;
+
+  --color-label-text: var(--color-neutral-600);
+
+  --color-alert: #fff;
+  --color-alert-foreground: var(--foreground);
+
+  --color-conditions-title: var(--color-neutral-700);
+  --color-conditions-foreground: var(--color-neutral-700);
+}
+
+.dark {
+  --color-header-bg: oklch(21.2% 0.0092 255.61 / 60%);
+  --color-header-title: oklch(80.34% 0.1461 64.6);
+
+  --color-menu-border: oklch(34.51% 0.0133 248.21);
+  --color-menu-hover-bg: oklch(34.51% 0.0133 248.21);
+  --color-menu-selected-text: oklch(92.66% 0.039464 240.0056);
+  --color-menu-selected-bg: oklch(49.42% 0.1332 251.82 / 50%);
+  --color-menu-selected-border: oklch(44.32% 0.1167 251.19);
+
+  --color-tab-outer-border: --alpha(var(--color-neutral-700) / 0.6);
+  --color-tab-text: var(--color-neutral-400);
+  --color-tab-bg: --alpha(var(--color-neutral-900) / 0.4);
+
+  --color-label-text: var(--color-neutral-400);
+
+  --color-alert: oklch(34.51% 0.0133 248.21);
+  --color-alert-foreground: var(--foreground);
+
+  --color-conditions-title: var(--color-neutral-300);
+  --color-conditions-foreground: var(--color-neutral-300);
+}
