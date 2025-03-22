@@ -26,9 +26,9 @@ The [backend server](https://github.com/bljohnsondev/react-sample-templates/tree
 - [Biome](https://biomejs.dev/) - Linting and formatting
 - [Mantine](https://mantine.dev/) - UI component library
 - [React Aria](https://react-spectrum.adobe.com/react-aria/index.html) - Accessible headless component library
-- [shadcn/ui](https://ui.shadcn.com/)
+- [shadcn/ui](https://ui.shadcn.com/) - Component library using Tailwind CSS and Radix primitives
 - [Open Props](https://open-props.style/) - CSS variables / web design tokens
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework 
 - [React Hook Form](https://react-hook-form.com/) - Form validation
 - [Zustand](https://github.com/pmndrs/zustand) - State management
 - [Fastify](https://fastify.dev) - Fastify API server
