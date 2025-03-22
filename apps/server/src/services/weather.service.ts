@@ -1,10 +1,6 @@
-import { callApi } from 'react-common-template';
+import { type CurrentConditions, callApi } from 'react-common-template';
 
-export interface CurrentConditions {
-  time?: Date;
-  temperature?: number;
-  wind?: number;
-}
+const prefixUrl = 'https://api.open-meteo.com/v1';
 
 interface CurrentResponse {
   time?: Date;
@@ -16,9 +12,9 @@ interface WeatherResponse {
   current?: CurrentResponse;
 }
 
-export async function getCurrentConditions(lat: number, long: number): Promise<CurrentConditions | undefined> {
+export const getWeatherConditions = async (lat: string, long: string): Promise<CurrentConditions | undefined> => {
   const response = await callApi<WeatherResponse>(
-    `forecast?latitude=${lat}&longitude=${long}&temperature_unit=fahrenheit&wind_speed_unit=mph&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`,
+    `${prefixUrl}/forecast?latitude=${lat}&longitude=${long}&temperature_unit=fahrenheit&wind_speed_unit=mph&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`,
     'get'
   );
 
@@ -31,4 +27,4 @@ export async function getCurrentConditions(lat: number, long: number): Promise<C
         }
       : undefined;
   }
-}
+};

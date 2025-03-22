@@ -1,6 +1,6 @@
 import { Card, Text } from '@mantine/core';
 
-import type { CurrentConditions } from '../api/weather-api';
+import type { CurrentConditions } from 'react-common-template';
 
 import styles from './conditions.module.css';
 

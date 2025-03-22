@@ -1,4 +1,4 @@
-import type { CurrentConditions } from '../api/weather-api';
+import type { CurrentConditions } from 'react-common-template';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 

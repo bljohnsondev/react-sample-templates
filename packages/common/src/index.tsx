@@ -8,6 +8,8 @@ export * from './components/spinner';
 
 /* utils */
 export * from './lib/api-client';
+export * from './lib/weather-api';
 
 /* types */
 export type { MenuItem } from './types/menu-item';
+export type { CurrentConditions } from './types/current-conditions';
