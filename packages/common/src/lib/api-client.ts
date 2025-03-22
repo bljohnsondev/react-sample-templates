@@ -1,4 +1,4 @@
-import ky from 'ky';
+import ky, { type SearchParamsOption } from 'ky';
 
 export type ApiMethod = 'get' | 'post' | 'put' | 'delete';
 
@@ -9,7 +9,6 @@ export interface ApiResponse<T> {
 }
 
 export const api = ky.create({
-  prefixUrl: 'https://api.open-meteo.com/v1',
   retry: {
     limit: 0, // disable auto retries
   },
@@ -19,7 +18,15 @@ export async function callApi<T>(url: string, method: ApiMethod = 'get', data?: 
   const defaultErrorMessage = 'An unknown error occurred';
 
   try {
-    const response = await api[method](url, { json: data });
+    let response = undefined;
+
+    if (method === 'get') {
+      const params = data as SearchParamsOption;
+      response = await api[method](url, { searchParams: params });
+    } else {
+      response = await api[method](url, { json: data });
+    }
+
     const json: T = await response.json();
 
     return {

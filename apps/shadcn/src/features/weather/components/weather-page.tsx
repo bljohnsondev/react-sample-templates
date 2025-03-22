@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 
-import { type CurrentConditions, getCurrentConditions } from '../api/weather-api';
+import { type CurrentConditions, getWeatherConditions } from 'react-common-template';
 
 import { Conditions } from './conditions';
 
@@ -35,7 +35,7 @@ export function WeatherPage() {
 
   async function onSubmit(values: FormValues) {
     setLoading(true);
-    const conditions = await getCurrentConditions(Number.parseInt(values.lat), Number.parseInt(values.long));
+    const conditions = await getWeatherConditions(values.lat, values.long);
     setLoading(false);
     setConditions(conditions);
   }

@@ -1,0 +1,1 @@
+{"root":["./src/server.ts","./src/routes/index.ts","./src/routes/weather.router.ts","./src/services/weather.service.ts"],"version":"5.8.2"}

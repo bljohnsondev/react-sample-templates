@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { Button } from 'react-aria-components';
+import { type CurrentConditions, getWeatherConditions } from 'react-common-template';
 import { useForm } from 'react-hook-form';
 
-import { type CurrentConditions, getCurrentConditions } from '../api/weather-api';
-
 import { Conditions } from './conditions';
-import styles from './weather-page.module.css';
 
 import { TextField } from '@/components/form/text-field';
 import { AppLayout } from '@/components/layout/app-layout';
 import { useToastStore } from '@/store/toast-store';
+
+import styles from './weather-page.module.css';
 
 interface FormValues {
   lat: string;
@@ -39,7 +39,7 @@ export function WeatherPage() {
 
   async function onSubmit(values: FormValues) {
     setLoading(true);
-    const conditions = await getCurrentConditions(Number.parseInt(values.lat), Number.parseInt(values.long));
+    const conditions = await getWeatherConditions(values.lat, values.long);
     setLoading(false);
 
     setConditions(conditions);

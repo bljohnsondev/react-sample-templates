@@ -12,8 +12,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.tsx'),
       name: 'react-common-template',
-      fileName: 'index',
-      formats: ['es'],
+      fileName: format => `index.${format === 'es' ? 'js' : 'cjs'}`,
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react-router'],
