@@ -1,0 +1,54 @@
+:root {
+  --app-font-weight-light: 300;
+  --app-font-weight-normal: 400;
+  --app-font-weight-semibold: 500;
+  --app-font-weight-bold: 700;
+
+  --app-header-height: 4rem;
+
+  --focus-ring-color: var(--mantine-color-blue-9);
+
+  --app-foreground: var(--mantine-color-gray-4);
+  --app-background: var(--mantine-color-gray-9);
+  --app-border-color: var(--mantine-color-gray-8);
+  --app-header-color: var(--mantine-color-orange-4);
+  --app-header-bg-color: var(--mantine-color-dark-8);
+  --app-header-icon-color: var(--mantine-color-blue-5);
+  --app-title-color: var(--mantine-color-green-5);
+  --app-menu-color: var(--mantine-color-dark-1);
+  --app-menu-bg-color: var(--app-background);
+  --app-menu-hover-bg-color: var(--mantine-color-gray-8);
+  --app-menu-border-color: var(--mantine-color-gray-8);
+  --app-menu-selected-color: var(--mantine-color-blue-1);
+  /* biome-ignore lint/correctness/noUnknownFunction: Mantine function */
+  --app-menu-selected-bg-color: alpha(var(--mantine-color-blue-9), 0.4);
+  /* biome-ignore lint/correctness/noUnknownFunction: Mantine function */
+  --app-menu-selected-border-color: darken(var(--mantine-color-blue-6), 0.4);
+  --app-tab-color: var(--mantine-color-blue-3);
+
+  --app-messages-list-color: var(--app-foreground);
+  --app-messages-list-bg-color: var(--mantine-color-dark-6);
+  --app-messages-list-border-color: var(--mantine-color-dark-4);
+}
+
+html[data-color-scheme="light"] {
+  --app-foreground: var(--mantine-color-dark-9);
+  --app-background: var(--mantine-color-gray-1);
+  --app-border-color: var(--mantine-color-gray-3);
+  --app-header-color: var(--mantine-color-orange-9);
+  --app-header-bg-color: var(--mantine-color-gray-3);
+  --app-header-icon-color: var(--mantine-color-blue-8);
+  --app-title-color: var(--mantine-color-green-9);
+  --app-menu-color: var(--mantine-color-dark-4);
+  --app-menu-bg-color: var(--app-background);
+  --app-menu-hover-bg-color: var(--mantine-color-gray-3);
+  --app-menu-border-color: var(--mantine-color-gray-4);
+  --app-menu-selected-color: var(--mantine-color-blue-9);
+  --app-menu-selected-bg-color: var(--mantine-color-blue-1);
+  --app-menu-selected-border-color: var(--mantine-color-blue-3);
+  --app-tab-color: var(--mantine-color-blue-9);
+
+  --app-messages-list-color: var(--app-foreground);
+  --app-messages-list-bg-color: var(--mantine-color-gray-2);
+  --app-messages-list-border-color: var(--mantine-color-gray-4);
+}

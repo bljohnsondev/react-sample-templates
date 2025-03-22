@@ -1,0 +1,99 @@
+:root {
+  --app-font-weight-light: 300;
+  --app-font-weight-normal: 400;
+  --app-font-weight-semibold: 500;
+  --app-font-weight-bold: 700;
+
+  /* added custom size not included in open-props */
+  --font-size-01: 0.875rem;
+
+  --app-header-height: 4rem;
+
+  --field-text-color: var(--stone-5);
+  --field-border-color: var(--gray-7);
+  --field-background: hsl(var(--stone-10-hsl) / 50%);
+  --focus-ring-color: var(--blue-9);
+
+  --app-foreground: var(--gray-3);
+  --app-background: var(--gray-9);
+  --app-border-color: hsl(var(--gray-8-hsl) / 50%);
+  --app-header-color: var(--orange-4);
+  --app-header-bg-color: hsl(var(--gray-10-hsl) / 60%);
+  --app-header-icon-color: var(--blue-5);
+  --app-title-color: var(--green-5);
+  --app-menu-color: var(--gray-4);
+  --app-menu-bg-color: var(--app-background);
+  --app-menu-hover-bg-color: var(--gray-8);
+  --app-menu-border-color: var(--gray-8);
+  --app-menu-selected-color: var(--blue-1);
+  --app-menu-selected-bg-color: hsl(var(--blue-9-hsl) / 50%);
+  --app-menu-selected-border-color: var(--blue-10);
+
+  --app-card-bg-color: var(--gray-8);
+  --app-card-border-color: var(--gray-7);
+
+  --app-spinner-outer-color: var(--gray-4);
+  --app-spinner-inner-color: var(--blue-6);
+
+  --app-messages-list-color: var(--app-foreground);
+  --app-messages-list-bg-color: var(--gray-6);
+  --app-messages-list-border-color: var(--gray-4);
+
+  --ra-textinput-label-color: var(--gray-5);
+  --ra-textinput-border-color: var(--field-border-color);
+  --ra-textinput-bg-color: var(--field-background);
+  --ra-textinput-color: var(--field-text-color);
+  --ra-textinput-placeholder-color: var(--gray-7);
+
+  --ra-numberinput-border-color: var(--ra-textinput-border-color);
+
+  --ra-tab-border-color: var(--gray-8);
+  --ra-tab-border-selected-color: var(--blue-9);
+
+  --ra-toast-bg-color: var(--gray-8);
+  --ra-toast-close-color: var(--gray-6);
+  --ra-toast-close-bg-color: var(--gray-9);
+}
+
+html[data-color-scheme="light"] {
+  --field-text-color: var(--gray-8);
+  --field-border-color: var(--gray-1);
+  --field-background: var(--gray-5);
+  --focus-ring-color: var(--blue-9);
+
+  --app-foreground: var(--gray-9);
+  --app-background: var(--gray-1);
+  --app-border-color: var(--gray-4);
+  --app-header-color: var(--orange-9);
+  --app-header-bg-color: var(--gray-3);
+  --app-header-icon-color: var(--blue-8);
+  --app-title-color: var(--green-9);
+  --app-menu-color: var(--gray-7);
+  --app-menu-bg-color: var(--app-background);
+  --app-menu-hover-bg-color: var(--gray-3);
+  --app-menu-border-color: var(--gray-4);
+  --app-menu-selected-color: var(--blue-9);
+  --app-menu-selected-bg-color: var(--blue-1);
+  --app-menu-selected-border-color: var(--blue-3);
+
+  --app-card-bg-color: #fff;
+  --app-card-border-color: var(--gray-3);
+
+  --app-spinner-outer-color: var(--gray-4);
+  --app-spinner-inner-color: var(--blue-6);
+
+  --ra-textinput-label-color: var(--gray-7);
+  --ra-textinput-border-color: var(--gray-4);
+  --ra-textinput-bg-color: var(--gray-0);
+  --ra-textinput-color: var(--field-text-color);
+  --ra-textinput-placeholder-color: var(--gray-6);
+
+  --ra-numberinput-border-color: var(--red-4);
+
+  --ra-tab-border-color: var(--gray-5);
+  --ra-tab-border-selected-color: var(--blue-7);
+
+  --ra-toast-bg-color: var(--gray-0);
+  --ra-toast-close-color: var(--gray-6);
+  --ra-toast-close-bg-color: var(--gray-2);
+}
