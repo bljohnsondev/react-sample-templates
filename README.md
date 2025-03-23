@@ -40,3 +40,6 @@ The [backend server](https://github.com/bljohnsondev/react-sample-templates/tree
 
 ### React Aria
 ![React Aria Screenshot 1](https://raw.githubusercontent.com/bljohnsondev/react-sample-templates/refs/heads/main/docs/ra-screenshot1.jpg)
+
+### shadcn/ui
+![shadcn/ui Screenshot 1](https://raw.githubusercontent.com/bljohnsondev/react-sample-templates/refs/heads/main/docs/shad-screenshot1.jpg)
