@@ -24,11 +24,11 @@ export function CounterPage() {
             ? `You clicked the button ${count} time${count === 1 ? '' : 's'}`
             : 'This is a test template'}
       </div>
-      <div className="flex gap-2">
-        <Button disabled={count > 10} onClick={handleClick}>
+      <div className="flex gap-2 flex-col md:flex-row">
+        <Button disabled={count > 10} onClick={handleClick} className="w-full md:w-auto">
           Count
         </Button>
-        <Button disabled={count < 1} onClick={handleReset}>
+        <Button disabled={count < 1} onClick={handleReset} className="w-full md:w-auto">
           Reset
         </Button>
       </div>
