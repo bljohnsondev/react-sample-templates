@@ -42,7 +42,7 @@ export function MessagesPage() {
       },
     ]);
 
-    toast(values.message, { duration: 100000 });
+    toast(values.message);
 
     form.reset();
   }
@@ -59,7 +59,7 @@ export function MessagesPage() {
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
               <div className="my-3">Enter your message below</div>
-              <div className="w-[30rem] mb-3">
+              <div className="w-full md:w-[30rem] mb-3">
                 <FormField
                   control={form.control}
                   name="message"
@@ -77,7 +77,9 @@ export function MessagesPage() {
                 />
               </div>
               <div className="actions">
-                <Button type="submit">Message</Button>
+                <Button type="submit" className="w-full md:w-auto">
+                  Message
+                </Button>
               </div>
             </form>
           </Form>
@@ -94,7 +96,7 @@ export function MessagesPage() {
               ))
             )}
           </article>
-          <Button type="button" onClick={handleClearMessages}>
+          <Button type="button" onClick={handleClearMessages} className="w-full md:w-auto">
             Clear
           </Button>
         </TabsContent>

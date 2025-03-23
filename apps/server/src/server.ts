@@ -9,7 +9,7 @@ dotenv.config();
 const server: FastifyInstance = Fastify({});
 
 server.register(cors, {
-  origin: process.env.CORS_ORIGIN,
+  origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : undefined,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 });

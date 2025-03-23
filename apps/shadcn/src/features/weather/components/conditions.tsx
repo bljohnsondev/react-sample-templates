@@ -8,7 +8,7 @@ interface ConditionsProps {
 
 export function Conditions({ conditions }: ConditionsProps) {
   return (
-    <Card className="mt-4 w-[400px]">
+    <Card className="mt-4 w-full md:w-[400px]">
       <CardHeader>
         <CardTitle className="text-conditions-title">Current Conditions</CardTitle>
       </CardHeader>
