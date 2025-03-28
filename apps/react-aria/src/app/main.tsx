@@ -10,7 +10,7 @@ import '@/styles/theme.css';
 import '@/styles/react-aria.css';
 import '@/styles/toast.css';
 
-import 'react-common-template/dist/style.css';
+import 'common-template/dist/style.css';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

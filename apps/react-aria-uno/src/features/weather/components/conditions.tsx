@@ -1,4 +1,4 @@
-import type { CurrentConditions } from 'react-common-template';
+import type { CurrentConditions } from 'common-template';
 
 import { Card } from '@/components/card';
 

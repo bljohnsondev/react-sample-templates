@@ -15,10 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/cors": "^11.0.0",
+    "common-template": "workspace:*",
     "dotenv": "^16.4.7",
     "fastify": "^5.2.1",
-    "ky": "^1.7.5",
-    "react-common-template": "workspace:*"
+    "ky": "^1.7.5"
   },
   "devDependencies": {
     "@types/node": "^22.13.11",

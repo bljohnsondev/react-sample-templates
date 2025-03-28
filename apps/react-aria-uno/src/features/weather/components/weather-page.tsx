@@ -1,5 +1,5 @@
+import { type CurrentConditions, getWeatherConditions } from 'common-template';
 import { useState } from 'react';
-import { type CurrentConditions, getWeatherConditions } from 'react-common-template';
 import { useForm } from 'react-hook-form';
 
 import { Conditions } from './conditions';

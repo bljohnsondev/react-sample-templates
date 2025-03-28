@@ -10,7 +10,7 @@ import 'virtual:uno.css';
 import '@/styles/index.css';
 import '@/styles/react-aria.css';
 
-import 'react-common-template/dist/style.css';
+import 'common-template/dist/style.css';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

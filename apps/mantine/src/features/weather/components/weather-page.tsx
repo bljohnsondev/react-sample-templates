@@ -1,7 +1,7 @@
 import { Box, Button, NumberInput } from '@mantine/core';
 import { isNotEmpty, useForm } from '@mantine/form';
+import { type CurrentConditions, getWeatherConditions } from 'common-template';
 import { useState } from 'react';
-import { type CurrentConditions, getWeatherConditions } from 'react-common-template';
 
 import { Conditions } from './conditions';
 import styles from './weather-page.module.css';

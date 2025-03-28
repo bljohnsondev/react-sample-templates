@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { MenuItem } from 'react-common-template';
+import type { MenuItem } from 'common-template';
 import { NavLink } from 'react-router';
 
 interface MainMenuProps {

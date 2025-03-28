@@ -1,4 +1,4 @@
-import { AppLayout as SharedLayout } from 'react-common-template';
+import { AppLayout as SharedLayout } from 'common-template';
 
 import { menuItems } from '@/app/menu-items';
 import { globalConfig } from '@/config/config-vars';

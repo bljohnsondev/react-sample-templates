@@ -1,4 +1,4 @@
-import { Overlay } from 'react-common-template';
+import { Overlay } from 'common-template';
 import { RouterProvider } from 'react-router';
 
 import { useToastStore } from '@/store/toast-store';

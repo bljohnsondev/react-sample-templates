@@ -11,7 +11,8 @@ import '@mantine/notifications/styles.css';
 
 import '@/styles/main.css';
 import '@/styles/theme.css';
-import 'react-common-template/dist/style.css';
+
+import 'common-template/dist/style.css';
 
 const theme = createTheme({
   fontFamily: 'Inter Variable, sans-serif',
