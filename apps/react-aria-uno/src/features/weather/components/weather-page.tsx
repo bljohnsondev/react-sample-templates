@@ -1,15 +1,13 @@
 import { useState } from 'react';
-import { Button } from 'react-aria-components';
 import { type CurrentConditions, getWeatherConditions } from 'react-common-template';
 import { useForm } from 'react-hook-form';
 
 import { Conditions } from './conditions';
 
+import { Button } from '@/components/form/button';
 import { TextField } from '@/components/form/text-field';
 import { AppLayout } from '@/components/layout/app-layout';
-import { useToastStore } from '@/store/toast-store';
-
-import styles from './weather-page.module.css';
+import { useAppStore } from '@/store/app-store';
 
 interface FormValues {
   lat: string;
@@ -18,7 +16,7 @@ interface FormValues {
 
 export function WeatherPage() {
   const [errorMessage, setErrorMessage] = useState<string>();
-  const setLoading = useToastStore(state => state.setLoading);
+  const setLoading = useAppStore(state => state.setLoading);
   const {
     control,
     handleSubmit,
@@ -55,21 +53,25 @@ export function WeatherPage() {
   return (
     <AppLayout>
       <h1 className="title">Weather</h1>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
         <div>Enter a latitude and longitude in the form below</div>
-        <div className={styles.inputContainer}>
-          <div className={styles.input}>
+        <div className="flex flex-col md:flex-row gap-4 items-start">
+          <div className="w-32">
             <TextField control={control} name="lat" required={true} label="Latitude" />
             {errors.lat && <div className="error-message">Latitude is required</div>}
           </div>
-          <div className={styles.input}>
+          <div className="w-32">
             <TextField control={control} name="long" required={true} label="Longitude" />
             {errors.long && <div className="error-message">Longitude is required</div>}
           </div>
         </div>
         <div className="actions">
-          <Button type="submit">Get Weather</Button>
-          <Button onPress={handleReset}>Reset</Button>
+          <Button variant="filled" type="submit">
+            Get Weather
+          </Button>
+          <Button variant="filled" onPress={handleReset}>
+            Reset
+          </Button>
         </div>
         {errorMessage && <div className="error-message">Error: {errorMessage}</div>}
         {conditions ? (
