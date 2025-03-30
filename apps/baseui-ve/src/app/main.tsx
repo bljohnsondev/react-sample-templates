@@ -1,16 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { ToastProvider } from '@/components/toast/toast-provider';
-
 import { AppRouter } from './app-router';
 
 import 'sanitize.css';
 import 'sanitize.css/assets.css';
 import 'sanitize.css/forms.css';
 
+import 'common-template/dist/style.css';
 import '@/styles/index.css';
-import '@/styles/ark.css';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -19,8 +17,6 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
   <StrictMode>
-    <ToastProvider>
-      <AppRouter />
-    </ToastProvider>
+    <AppRouter />
   </StrictMode>
 );

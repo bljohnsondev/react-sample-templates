@@ -17,7 +17,7 @@ export function CounterPage() {
   return (
     <AppLayout>
       <h1 className="title">Counter</h1>
-      <div>
+      <div className="page-content">
         {count > 10
           ? 'Enough with the clicking!'
           : count > 0
