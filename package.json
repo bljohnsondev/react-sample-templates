@@ -12,7 +12,6 @@
     "dev-mantine": "pnpm --filter mantine dev",
     "dev-server": "pnpm --filter server-fastify dev",
     "dev-shadcn": "pnpm --filter shadcn dev",
-    "dev-all": "concurrently -c \"blue,green,yellow,orange,purple,red\" \"pnpm run dev-common\" \"pnpm run dev-mantine\" \"pnpm run dev-aria\" \"pnpm run dev-aria-uno\" \"pnpm run dev-shadcn\" \"pnpm run dev-server\"",
     "lint-all": "pnpm run -r lint",
     "build-all": "pnpm run -r build",
     "clean-all": "pnpm run -r clean",
@@ -20,7 +19,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "concurrently": "^9.1.2",
     "typescript": "~5.8.2"
   },
   "keywords": [],
