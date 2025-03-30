@@ -8,6 +8,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: hsl(var(--gray-12-hsl) / 30%);
+  background-color: hsl(210 40% 2% / 30%);
   z-index: 999;
 }
