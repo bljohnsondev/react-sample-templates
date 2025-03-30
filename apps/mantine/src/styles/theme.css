@@ -5,6 +5,7 @@
   --app-font-weight-bold: 700;
 
   --app-header-height: 4rem;
+  --app-error-text: var(--mantine-color-red-5);
 
   --focus-ring-color: var(--mantine-color-blue-9);
 

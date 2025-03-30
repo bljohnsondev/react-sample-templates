@@ -1,7 +1,7 @@
 import { Box, Button, NumberInput } from '@mantine/core';
 import { isNotEmpty, useForm } from '@mantine/form';
+import { type CurrentConditions, getWeatherConditions } from 'common-template';
 import { useState } from 'react';
-import { type CurrentConditions, getWeatherConditions } from 'react-common-template';
 
 import { Conditions } from './conditions';
 import styles from './weather-page.module.css';
@@ -14,6 +14,7 @@ interface FormValues {
 }
 
 export function WeatherPage() {
+  const [errorMessage, setErrorMessage] = useState<string>();
   const [loading, setLoading] = useState<boolean>(false);
   const [conditions, setConditions] = useState<CurrentConditions | undefined>();
   const form = useForm({
@@ -30,14 +31,20 @@ export function WeatherPage() {
 
   async function handleSubmit(values: FormValues) {
     setLoading(true);
-    const conditions = await getWeatherConditions(values.lat, values.long);
-    setLoading(false);
 
-    setConditions(conditions);
+    const response = await getWeatherConditions(values.lat, values.long);
+    if (response.error) {
+      setErrorMessage(response.errorMessage ?? 'An unknown error occurred');
+    } else {
+      setConditions(response.json);
+    }
+
+    setLoading(false);
   }
 
   function handleReset() {
     setConditions(undefined);
+    setErrorMessage(undefined);
     form.reset();
   }
 
@@ -62,6 +69,7 @@ export function WeatherPage() {
             Reset
           </Button>
         </div>
+        {errorMessage && <div className="error-message">Error: {errorMessage}</div>}
         {conditions ? (
           <Box mt="sm">
             <Conditions conditions={conditions} />

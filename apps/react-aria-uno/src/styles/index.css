@@ -1,0 +1,14 @@
+body {
+  height: 100%;
+  @apply bg-background text-foreground dark:(bg-dark-background text-dark-foreground);
+
+  /* font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif; */
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+}
+
+/* These colors are required for the common overlay+spinner */
+:root {
+  --gray-12-hsl: 210 40% 2%;
+  --app-spinner-outer-color: #ccc;
+  --app-spinner-inner-color: oklch(0.424 0.199 265.638);
+}

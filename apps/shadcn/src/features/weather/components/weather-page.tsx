@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 
-import { type CurrentConditions, getWeatherConditions } from 'react-common-template';
+import { type CurrentConditions, getWeatherConditions } from 'common-template';
 
 import { Conditions } from './conditions';
 
@@ -18,6 +18,7 @@ interface FormValues {
 }
 
 export function WeatherPage() {
+  const [errorMessage, setErrorMessage] = useState<string>();
   const [loading, setLoading] = useState(false);
   const form = useForm<FormValues>({
     defaultValues: {
@@ -28,16 +29,23 @@ export function WeatherPage() {
 
   const [conditions, setConditions] = useState<CurrentConditions | undefined>();
 
-  function handleReset() {
-    setConditions(undefined);
-    form.reset();
-  }
-
   async function onSubmit(values: FormValues) {
     setLoading(true);
-    const conditions = await getWeatherConditions(values.lat, values.long);
+
+    const response = await getWeatherConditions(values.lat, values.long);
+    if (response.error) {
+      setErrorMessage(response.errorMessage ?? 'An unknown error occurred');
+    } else {
+      setConditions(response.json);
+    }
+
     setLoading(false);
-    setConditions(conditions);
+  }
+
+  function handleReset() {
+    setConditions(undefined);
+    setErrorMessage(undefined);
+    form.reset();
   }
 
   return (
@@ -91,6 +99,7 @@ export function WeatherPage() {
               Reset
             </Button>
           </div>
+          {errorMessage && <div className="error-message">Error: {errorMessage}</div>}
           {conditions && (
             <div>
               <Conditions conditions={conditions} />

@@ -1,4 +1,4 @@
-import { type CurrentConditions, callApi } from 'react-common-template';
+import { type CurrentConditions, callApi } from 'common-template';
 
 const prefixUrl = 'https://api.open-meteo.com/v1';
 

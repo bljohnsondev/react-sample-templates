@@ -1,6 +1,6 @@
+import { type CurrentConditions, getWeatherConditions } from 'common-template';
 import { useState } from 'react';
 import { Button } from 'react-aria-components';
-import { type CurrentConditions, getWeatherConditions } from 'react-common-template';
 import { useForm } from 'react-hook-form';
 
 import { Conditions } from './conditions';
@@ -17,6 +17,7 @@ interface FormValues {
 }
 
 export function WeatherPage() {
+  const [errorMessage, setErrorMessage] = useState<string>();
   const setLoading = useToastStore(state => state.setLoading);
   const {
     control,
@@ -34,15 +35,21 @@ export function WeatherPage() {
 
   function handleReset() {
     setConditions(undefined);
+    setErrorMessage(undefined);
     reset();
   }
 
   async function onSubmit(values: FormValues) {
     setLoading(true);
-    const conditions = await getWeatherConditions(values.lat, values.long);
-    setLoading(false);
 
-    setConditions(conditions);
+    const response = await getWeatherConditions(values.lat, values.long);
+    if (response.error) {
+      setErrorMessage(response.errorMessage ?? 'An unknown error occurred');
+    } else {
+      setConditions(response.json);
+    }
+
+    setLoading(false);
   }
 
   return (
@@ -64,6 +71,7 @@ export function WeatherPage() {
           <Button type="submit">Get Weather</Button>
           <Button onPress={handleReset}>Reset</Button>
         </div>
+        {errorMessage && <div className="error-message">Error: {errorMessage}</div>}
         {conditions ? (
           <div>
             <Conditions conditions={conditions} />

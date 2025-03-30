@@ -1,0 +1,32 @@
+/***** TextField *****/
+
+.react-aria-TextField {
+  @apply flex flex-col;
+}
+
+.react-aria-TextField > .react-aria-Label {
+  @apply text-textfield-label mb-1 text-sm dark:text-dark-textfield-label;
+}
+
+.react-aria-TextField > .react-aria-Input,
+.react-aria-TextField > .react-aria-TextArea {
+  @apply px-3 py-2 m-0 border border-solid border-textfield-input-border dark:border-dark-textfield-input-border rounded-md bg-textfield-input-bg dark:bg-dark-textfield-input-bg text-base text-textfield-input-text dark:text-dark-textfield-input-text placeholder:(text-textfield-input-placeholder dark:text-dark-textfield-input-placeholder text-sm) data-[focused]:(outline-2 outline-solid outline-blue-500);
+}
+
+/***** Tabs *****/
+
+.react-aria-Tabs {
+  @apply flex flex-col;
+}
+
+.react-aria-TabList {
+  @apply flex gap-3 border-b border-b-solid border-tab-border dark:border-dark-tab-border;
+}
+
+.react-aria-Tab {
+  @apply px-4 py-2 outline-none pos-relative text-sm cursor-pointer text-tab-text dark:text-dark-tab-text data-[hovered]:(text-tab-hover-text dark:text-dark-tab-hover-text) data-[selected]:(border-b-3 border-b-solid border-tab-selected-border) after:data-[focus-visible]:(content-[""] absolute inset-[4px] rounded-md border-2 border-solid border-blue-500);
+}
+
+.react-aria-TabPanel {
+  @apply mt-3 rounded-sm data-[focus-visible]:(outline outline-solid outline-blue-500);
+}

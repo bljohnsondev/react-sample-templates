@@ -50,8 +50,14 @@ h1.title {
   font-weight: var(--app-font-weight-bold);
 }
 
+.error-message {
+  color: var(--app-error-text);
+  font-size: var(--mantine-font-size-sm);
+  margin-top: var(--mantine-spacing-sm);
+}
+
 .mantine-Tabs-list {
-  margin-bottom: var(--mantine-spacing-md);
+  margin-bottom: var(--mantine-spacing-xs);
 }
 
 .mantine-Tabs-list > button {
