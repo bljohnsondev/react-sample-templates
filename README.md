@@ -30,27 +30,27 @@ These are the packages commonly used by the React frontend projects.
 These are the different frontend projects. They are a combination of different UI and/or CSS libraries.
 
 - [Ark UI and Vanilla Extract](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/ark-ve)
-	- [Ark UI](https://ark-ui.com) - Headless component libary by the creators of Chakra UI
+  - [Ark UI](https://ark-ui.com) - Headless component libary by the creators of Chakra UI
   - [Vanilla Extract](https://vanilla-extract.style) - Zero-runtime Stylesheets in TypeScript
 
 - [Base UI and Vanilla Extract](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/baseui-ve)
-	- [Base UI](https://base-ui.com) - Headless component libary by the creators of Radix and Material UI
+  - [Base UI](https://base-ui.com) - Headless component libary by the creators of Radix and Material UI
   - [Vanilla Extract](https://vanilla-extract.style) - Zero-runtime Stylesheets in TypeScript
 
 - [Mantine](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/mantine)
-	- [Mantine](https://mantine.dev/) - Fully featured component library
+  - [Mantine](https://mantine.dev/) - Fully featured component library
 
 - [React Aria](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/react-aria)
-	- [React Aria](https://react-spectrum.adobe.com/react-aria/index.html) - Headless component libary by Adobe
+  - [React Aria](https://react-spectrum.adobe.com/react-aria/index.html) - Headless component libary by Adobe
   - [Open Props](https://open-props.style) - CSS web design tokens
     
 - [React Aria and UnoCSS](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/react-aria-uno)
-	- [React Aria](https://react-spectrum.adobe.com/react-aria/index.html) - Headless component libary by Adobe
+  - [React Aria](https://react-spectrum.adobe.com/react-aria/index.html) - Headless component libary by Adobe
   - [UnoCSS](https://unocss.dev) - Atomic CSS engine
 
-- [shadcn/ui Template](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/shadcn)
-	- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-  - [shadcn/ui](https://ui.shadcn.com/) - Components built with Tailwind and Radix UI
+- [shadcn/ui](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/shadcn)
+  - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+  - [shadcn/ui](https://ui.shadcn.com/) - Components built with Tailwind and [Radix UI](https://www.radix-ui.com/primitives)
 
 ## Backend
 
