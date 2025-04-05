@@ -54,7 +54,11 @@ These are the different frontend projects. They are a combination of different U
 
 ## Backend
 
-The [backend server](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/server-fastify) is a simple REST API that uses [Fastify](https://fastify.dev/).
+- [Hono Server](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/server-hono)
+  - [Hono](https://hono.dev) - Web application framework
+
+- [Fastify Server](https://github.com/bljohnsondev/react-sample-templates/tree/main/apps/server-fastify)
+  - [Fastify](https://fastify.dev/) - Fast and low overhead web framework
 
 ## Screenshots
 
