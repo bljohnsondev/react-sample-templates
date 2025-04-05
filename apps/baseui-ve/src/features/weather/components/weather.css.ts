@@ -1,17 +1,16 @@
 import { style } from '@vanilla-extract/css';
-
-import { contract } from '@/styles/theme-contract.css';
+import { themeContract as tc } from 've-style';
 
 export const form = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: contract.size[4],
+  gap: tc.size[4],
 });
 
 export const inputContainer = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: contract.size[4],
+  gap: tc.size[4],
   alignItems: 'flex-start',
   '@media': {
     'screen and (min-width: 768px)': {

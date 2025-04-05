@@ -4,20 +4,23 @@ import { toast as sonnerToast } from 'sonner';
 
 import type { CustomToast } from '@/types/custom-toast';
 
-import { close, indicatorVariant, toastRoot } from './toast.css';
+import { close, indicatorVariant, toastVariant } from './toast.css';
 
 export function toast(toast: CustomToast) {
   return sonnerToast.custom(id => <Toast id={id} toast={toast} />);
 }
 
+type ToastVariant = 'normal' | 'inline';
+
 interface ToastProps {
   id?: string | number;
+  variant?: ToastVariant;
   toast: CustomToast;
   onClose?: (id: string) => void;
   className?: string;
 }
 
-export function Toast({ id, toast, onClose, className }: ToastProps) {
+export function Toast({ id, variant = 'normal', toast, onClose, className }: ToastProps) {
   const indVariant = toast.level ? indicatorVariant[toast.level] : indicatorVariant.success;
 
   function handleClose() {
@@ -29,7 +32,7 @@ export function Toast({ id, toast, onClose, className }: ToastProps) {
   }
 
   return (
-    <div className={clsx(toastRoot, className)}>
+    <div className={clsx(toastVariant[variant], className)}>
       <div className={indVariant} />
       <div>{toast.message}</div>
       <div className={close}>
