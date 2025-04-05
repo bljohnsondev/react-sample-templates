@@ -1,16 +1,17 @@
 import { style, styleVariants } from '@vanilla-extract/css';
+import { themeContract as tc } from 've-style';
 
-import { contract } from '@/styles/theme-contract.css';
+import { localContract as lc } from '@/styles/theme-contract.css';
 
 export const baseButton = style({
-  padding: `${contract.size[2]} ${contract.size[4]}`,
-  borderRadius: contract.radius[2],
-  fontWeight: contract.fontWeight.semibold,
-  fontSize: contract.fontSize.sm,
+  padding: `${tc.size[2]} ${tc.size[4]}`,
+  borderRadius: tc.borderRadius.md,
+  fontWeight: tc.fontWeight.semibold,
+  fontSize: tc.fontSize.sm,
   width: 'fit-content',
   cursor: 'pointer',
   ':focus-visible': {
-    outline: `2px solid ${contract.color.focusRing}`,
+    outline: `2px solid ${lc.color.focusRing}`,
     outlineOffset: '-1px',
   },
 });
@@ -19,17 +20,17 @@ export const buttonVariant = styleVariants({
   default: [
     baseButton,
     {
-      backgroundColor: contract.color.button.default.bg,
-      color: contract.color.button.default.text,
-      border: `1px solid ${contract.color.button.default.border}`,
+      backgroundColor: lc.color.button.default.bg,
+      color: lc.color.button.default.text,
+      border: `1px solid ${lc.color.button.default.border}`,
     },
   ],
   primary: [
     baseButton,
     {
-      backgroundColor: contract.color.button.primary.bg,
-      color: contract.color.button.primary.text,
-      border: `1px solid ${contract.color.button.primary.border}`,
+      backgroundColor: lc.color.button.primary.bg,
+      color: lc.color.button.primary.text,
+      border: `1px solid ${lc.color.button.primary.border}`,
     },
   ],
 });

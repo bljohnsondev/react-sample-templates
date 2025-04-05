@@ -1,13 +1,14 @@
 import { globalStyle } from '@vanilla-extract/css';
+import { themeContract as tc } from 've-style';
 
-import { contract } from '@/styles/theme-contract.css';
+import { localContract as lc } from '@/styles/theme-contract.css';
 
 globalStyle('html, body', {
   margin: 0,
   padding: 0,
-  fontFamily: 'Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif',
+  fontFamily: tc.fontFamily.neoGrotesque,
   fontSize: '16px',
-  backgroundColor: contract.color.background,
+  backgroundColor: lc.color.background,
 });
 
 globalStyle('.lock-scroll', {
@@ -17,20 +18,20 @@ globalStyle('.lock-scroll', {
 });
 
 globalStyle('h1.title', {
-  color: contract.color.page.title,
+  color: lc.color.page.title,
   marginTop: 0,
-  marginBottom: contract.size[3],
-  fontSize: contract.fontSize.md,
-  fontWeight: contract.fontWeight.bold,
+  marginBottom: tc.size[3],
+  fontSize: tc.fontSize.md,
+  fontWeight: tc.fontWeight.bold,
 });
 
 globalStyle('.page-content', {
-  marginBottom: contract.size[3],
+  marginBottom: tc.size[3],
 });
 
 globalStyle('.actions', {
   display: 'flex',
-  gap: contract.size[2],
+  gap: tc.size[2],
   '@media': {
     'screen and (max-width: 768px)': {
       flexDirection: 'column',
@@ -51,6 +52,6 @@ globalStyle('.unset', {
 });
 
 globalStyle('.error-message', {
-  color: contract.color.error,
-  fontSize: contract.fontSize.xs,
+  color: lc.color.error,
+  fontSize: tc.fontSize.xs,
 });

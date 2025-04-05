@@ -1,48 +1,57 @@
 import { style, styleVariants } from '@vanilla-extract/css';
+import { themeContract as tc } from 've-style';
 
-import { colors } from '@/styles/colors';
-import { contract } from '@/styles/theme-contract.css';
+import { localContract as lc } from '@/styles/theme-contract.css';
 
 export const toastRoot = style({
   display: 'flex',
   alignItems: 'center',
-  backgroundColor: contract.color.toast.bg,
-  color: contract.color.toast.text,
-  fontSize: contract.fontSize.sm,
+  backgroundColor: lc.color.toast.bg,
+  color: lc.color.toast.text,
+  fontSize: tc.fontSize.sm,
   width: '100%',
   height: '3rem',
-  borderRadius: contract.radius[2],
-  boxShadow: contract.shadow.md,
-  '@media': {
-    'screen and (min-width: 768px)': {
-      width: '20rem',
+  borderRadius: tc.borderRadius.md,
+  boxShadow: tc.shadow.md,
+});
+
+export const toastVariant = styleVariants({
+  normal: [
+    toastRoot,
+    {
+      '@media': {
+        'screen and (min-width: 768px)': {
+          width: '20rem',
+        },
+      },
     },
-  },
+  ],
+  inline: [toastRoot],
 });
 
 export const baseIndicator = style({
   margin: '4px',
-  marginRight: contract.size[3],
+  marginRight: tc.size[3],
   width: '5px',
   minWidth: '5px',
   alignSelf: 'stretch',
-  borderRadius: contract.radius[3],
+  borderRadius: tc.borderRadius.lg,
 });
 
 export const indicatorVariant = styleVariants({
-  success: [baseIndicator, { backgroundColor: colors.green[600] }],
-  warning: [baseIndicator, { backgroundColor: colors.yellow[500] }],
-  danger: [baseIndicator, { backgroundColor: colors.red[500] }],
+  success: [baseIndicator, { backgroundColor: tc.color['green-600'] }],
+  warning: [baseIndicator, { backgroundColor: tc.color['yellow-500'] }],
+  danger: [baseIndicator, { backgroundColor: tc.color['red-500'] }],
 });
 
 export const close = style({
-  color: contract.color.toast.close.text,
+  color: lc.color.toast.close.text,
   marginLeft: 'auto',
   padding: 0,
-  paddingRight: contract.size[4],
+  paddingRight: tc.size[4],
   lineHeight: 0,
   border: 0,
   ':hover': {
-    color: contract.color.toast.close.hover,
+    color: lc.color.toast.close.hover,
   },
 });

@@ -90,7 +90,7 @@ export function MessagesPage() {
           ) : (
             <div className={inlineMessages}>
               {messages.map(message => (
-                <Toast key={`it-${message.id}`} toast={message} onClose={handleRemoveMessage} className="md:w-full" />
+                <Toast key={`it-${message.id}`} variant="inline" toast={message} onClose={handleRemoveMessage} />
               ))}
             </div>
           )}

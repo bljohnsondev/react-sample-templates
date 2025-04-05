@@ -12,6 +12,7 @@
     "dev-mantine": "pnpm --filter mantine dev",
     "dev-server": "pnpm --filter server-fastify dev",
     "dev-shadcn": "pnpm --filter shadcn dev",
+    "dev-style": "pnpm --filter ve-style dev",
     "lint-all": "pnpm run -r lint",
     "build-all": "pnpm run -r build",
     "clean-all": "pnpm run -r clean",

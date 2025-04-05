@@ -1,12 +1,11 @@
 import { style } from '@vanilla-extract/css';
-
-import { contract } from '@/styles/theme-contract.css';
+import { themeContract as tc } from 've-style';
 
 export const newMessageContent = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: contract.size[1],
-  marginBlock: contract.size[3],
+  gap: tc.size[1],
+  marginBlock: tc.size[3],
 });
 
 export const newMessageInput = style({
@@ -16,6 +15,6 @@ export const newMessageInput = style({
 export const inlineMessages = style({
   display: 'flex',
   flexDirection: 'column',
-  gap: contract.size[2],
-  marginBottom: contract.size[4],
+  gap: tc.size[2],
+  marginBottom: tc.size[4],
 });

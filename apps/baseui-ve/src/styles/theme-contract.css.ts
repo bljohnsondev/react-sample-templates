@@ -1,54 +1,6 @@
 import { createThemeContract } from '@vanilla-extract/css';
 
-export const contract = createThemeContract({
-  fontSize: {
-    xs: null,
-    sm: null,
-    md: null,
-    lg: null,
-    xl: null,
-    xxl: null,
-  },
-  fontWeight: {
-    light: null,
-    normal: null,
-    medium: null,
-    semibold: null,
-    bold: null,
-  },
-  radius: {
-    '1': null,
-    '2': null,
-    '3': null,
-    '4': null,
-    '5': null,
-    '6': null,
-  },
-  size: {
-    '1': null,
-    '2': null,
-    '3': null,
-    '4': null,
-    '5': null,
-    '6': null,
-    '7': null,
-    '8': null,
-    '9': null,
-    '10': null,
-    '11': null,
-    '12': null,
-    '13': null,
-    '14': null,
-    '15': null,
-    '16': null,
-  },
-  shadow: {
-    xs: null,
-    sm: null,
-    md: null,
-    lg: null,
-    xl: null,
-  },
+export const localContract = createThemeContract({
   color: {
     background: null,
     foreground: null,

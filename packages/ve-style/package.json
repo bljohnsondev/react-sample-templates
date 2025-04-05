@@ -1,0 +1,42 @@
+{
+  "name": "ve-style",
+  "version": "1.0.0",
+  "type": "module",
+  "module": "dist/ve-style.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.js"
+    },
+    "./common": {
+      "types": "./dist/common.d.ts",
+      "import": "./dist/common.js"
+    },
+    "./theme.css": "./dist/ve-style.css"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "pnpm run clean && tsc -b && vite build",
+    "lint": "tsc --build --noEmit && biome check ./src",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.13.17",
+    "@vanilla-extract/css": "^1.17.1",
+    "@vanilla-extract/sprinkles": "^1.6.3",
+    "@vanilla-extract/vite-plugin": "^5.0.1",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.4",
+    "vite-plugin-dts": "^4.5.3"
+  },
+  "peerDependencies": {
+    "@vanilla-extract/css": "^1.17.1"
+  }
+}

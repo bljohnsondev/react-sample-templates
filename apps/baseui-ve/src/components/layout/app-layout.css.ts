@@ -1,10 +1,11 @@
 import { style } from '@vanilla-extract/css';
+import { themeContract as tc } from 've-style';
 
-import { contract } from '@/styles/theme-contract.css';
+import { localContract as lc } from '@/styles/theme-contract.css';
 
 export const mainGrid = style({
-  backgroundColor: contract.color.background,
-  color: contract.color.foreground,
+  backgroundColor: lc.color.background,
+  color: lc.color.foreground,
   display: 'grid',
   gridTemplateColumns: '0fr 1fr',
   gridTemplateRows: 'auto 1fr',
@@ -20,24 +21,24 @@ export const header = style({
   display: 'flex',
   alignItems: 'center',
   gap: '1rem',
-  backgroundColor: contract.color.header.bg,
-  color: contract.color.header.text,
-  fontWeight: contract.fontWeight.semibold,
+  backgroundColor: lc.color.header.bg,
+  color: lc.color.header.text,
+  fontWeight: tc.fontWeight.semibold,
   height: '4rem',
   paddingInline: '1rem',
   gridColumn: '1 / span 2',
-  borderBottom: `1px solid ${contract.color.border}`,
+  borderBottom: `1px solid ${lc.color.border}`,
   top: 0,
   zIndex: 9,
 });
 
 export const menuButton = style({
-  color: contract.color.header.icon,
+  color: lc.color.header.icon,
   border: 0,
-  borderRadius: contract.radius[2],
+  borderRadius: tc.borderRadius.md,
   cursor: 'pointer',
   ':focus-visible': {
-    outline: `2px solid ${contract.color.focusRing}`,
+    outline: `2px solid ${lc.color.focusRing}`,
     outlineOffset: '-1px',
   },
   '@media': {
@@ -48,13 +49,13 @@ export const menuButton = style({
 });
 
 export const themeButton = style({
-  color: contract.color.header.icon,
+  color: lc.color.header.icon,
   border: 0,
-  borderRadius: contract.radius[2],
+  borderRadius: tc.borderRadius.md,
   marginLeft: 'auto',
   cursor: 'pointer',
   ':focus-visible': {
-    outline: `2px solid ${contract.color.focusRing}`,
+    outline: `2px solid ${lc.color.focusRing}`,
     outlineOffset: '-1px',
   },
 });
@@ -65,7 +66,7 @@ export const content = style({
   gridColumn: 'span 2',
   '@media': {
     'screen and (min-width: 768px)': {
-      borderLeft: `1px solid ${contract.color.border}`,
+      borderLeft: `1px solid ${lc.color.border}`,
       gridColumn: 'span 1',
     },
   },
